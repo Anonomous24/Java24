@@ -1,1 +1,38 @@
+class string {
+  public static void main(String[] args) {
+    String s1 = "anjuman bca college";
+    String s2 = s1.toUpperCase();
+    System.out.println("The string s1: " + s1);
+    System.out.println("The string s2: " + s2);
+    System.out.println("Length of s1: " + s1.length());
+    System.out.println("First Occurence of B in s2: " + s2.indexOf("B"));
+    System.out.println("s1 == s2: " + s1.equals(s2));
+    System.out.println("s1 == s2: " + s1.equalsIgnoreCase(s2));
 
+    int result = s1.compareTo(s2);
+    System.out.println("After s1.compareTo(s2)");
+
+    if (result == 0) {
+      System.out.println(s1 + " is equal to " + s2);
+    } else if (result > 0) {
+      System.out.println(s1 + " is greater than " + s2);
+    } else {
+      System.out.println(s1 + " is smaller than " + s2);
+    }
+
+    System.out.println("The String At Index 6 of s1: " + s1.charAt(6));
+
+    String s3 = s1.substring(4,12);
+    System.out.println("The Extracted Subtracted Substring: " + s3);
+    System.out.println("Replacing b with m: " + s1.replace("b", "m"));
+
+    String s4 = "   This is a Book    ";
+    System.out.println("The String s4: " + s4);
+
+    System.out.println("After trim(): " + s4.trim());
+
+    String s5 = "Lincoln ", s6 = "Bancroft", s7;
+    s7 = s5.concat(s6);
+    System.out.println("Concatinating " + s5 + " and " + s6 + " : " + s7);
+  }
+}
