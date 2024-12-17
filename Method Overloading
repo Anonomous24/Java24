@@ -1,1 +1,22 @@
+class overload {
+  public int sum(int x, int y) {
+    return x + y;
+  }
 
+  public int sum(int x, int y, int z) {
+    return (x + y + z);
+  }
+  
+  public double sum(double x, double y) {
+    return (x + y);
+  }
+}
+
+class overloadTest {
+  public static void main(String[] args) {
+      overload o1 = new overload();
+      System.out.println(o1.sum(1, 2));
+      System.out.println(o1.sum(1, 2, 3));
+      System.out.println(o1.sum(10.5, 22.0));
+  }
+}
