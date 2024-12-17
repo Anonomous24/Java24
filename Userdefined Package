@@ -1,0 +1,34 @@
+package Mypack;
+
+public class calculator {
+  public int add(int a, int b) {
+    return a + b;
+  }
+  public int subtract(int a, int b) {
+    return a - b;
+  }
+  public int multiply(int a, int b) {
+    return a * b;
+  }
+  public int divide(int a, int b) {
+    if (b != 0)
+      return a / b;
+    else 
+      throw new ArithmeticException("Cannot Divide By Zero");
+  }
+}
+import Mypack.*;
+
+public class udefpackage {
+  public static void main(String[] args) {
+      calculator calc = new calculator();
+      int result = calc.add(1, 2);
+      System.out.println("Addition: " + result);
+      result = calc.subtract(2, 1);
+      System.out.println("Subtraction: " + result);
+      result = calc.multiply(2, 2);
+      System.out.println("Multiplication: " + result);
+      result = calc.divide(10, 2);
+      System.out.println("Division: " + result);
+  }
+}
