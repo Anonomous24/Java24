@@ -1,1 +1,22 @@
+public class prime {
+  public static void main(String[] args) {
+    int N = args.length, i, j, num;
+    boolean isPrime;
 
+    for (i = 0; i < N; i++) {
+      num = Integer.parseInt(args[i]);
+      isPrime = true;
+
+      for (j = 2; j < num; j++) {
+        if ((num % j) == 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime) {
+        System.out.println(num + " is Prime");
+      }
+    }
+  }
+}
