@@ -1,0 +1,26 @@
+class A {
+  int a = 0;
+  void fun(int i) {
+    this.a = i;
+  }
+}
+
+class B extends A {
+  int b;
+  void fun(int i) {
+    int c;
+    b = 20;
+    super.fun(i + 5);
+    System.out.println("The Value of A: " + a);
+    System.out.println("The Value of B: " + b);
+    c = a * b;
+    System.out.println("The Value of C: " + c);
+  }
+}
+
+class overrideDemo {
+  public static void main(String[] args) {
+      B obj_b = new B();
+      obj_b.fun(10);
+  }
+}
