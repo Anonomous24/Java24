@@ -1,1 +1,14 @@
-
+import java.util.Scanner;
+class areaCircle {
+  public static void main(String[] args) {
+      double circumference, area, radius;
+      final double pi = 3.14;
+      Scanner obj = new Scanner(System.in);
+      System.out.print("Enter Radius of the Circle: ");
+      radius = obj.nextFloat();
+      area = pi * (radius * radius);
+      circumference = 2 * pi * radius;
+      System.out.println("Circumference: " + circumference);
+      System.out.println("Area: " + area);
+  }
+}
